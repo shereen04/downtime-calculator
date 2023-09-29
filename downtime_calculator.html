@@ -1,35 +1,36 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2299.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downtime Calculator</title>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Downtime Calculator&lt;/title&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Downtime Calculator&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Form for user input --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;form id="downtime-form"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;label for="month"&gt;Month:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="month" name="month" required&gt;&lt;br&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Add other input fields here for days, downtime instances, etc. --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;button type="submit"&gt;Calculate&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/form&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Display the result here --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="result"&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+    <h1>Downtime Calculator</h1>
+    <!-- Form for user input -->
+    <form id="downtime-form">
+        <label for="month">Month:</label>
+        <input type="text" id="month" name="month" required><br>
+        <!-- Add other input fields here for days, downtime instances, etc. -->
+        <button type="submit">Calculate</button>
+    </form>
+    <!-- Display the result here -->
+    <div id="result"></div>
 </body>
+<script>
+    document.getElementById('downtime-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Retrieve user inputs and perform the calculation
+        const month = document.getElementById('month').value;
+        // Add code to get other input values (days, downtime instances) here
+
+        // Perform the downtime calculation (use the Python script logic here)
+        // ...
+
+        // Display the result
+        const resultElement = document.getElementById('result');
+        resultElement.innerHTML = `Downtime percentage for ${month}: ${downtime_percentage.toFixed(2)}%`;
+    });
+</script>
 </html>
